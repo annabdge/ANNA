@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITS Web App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <span class="logo">ITS Web App</span>
+      <button id="menu-btn" class="menu-btn" aria-label="Apri menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+      <button id="close-sidebar" class="close-btn" aria-label="Chiudi menu">
+        &times;
+      </button>
+      <div class="sidebar-content">
+        <div class="user-info">
+          <div class="user-icon">
+            <!-- icona utente SVG -->
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#fff">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M12 14c-5 0-8 2.5-8 4v2h16v-2c0-1.5-3-4-8-4z" />
+            </svg>
+          </div>
+          <div class="user-details">
+            <div class="user-name">Matteo Bruzzone</div>
+          </div>
+        </div>
+        <button class="sidebar-btn" id="btn-home">
+          <span class="icon">
+            <!-- icona casa SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#004f9f">
+              <path d="M12 3l10 9h-3v9h-6v-6h-2v6H5v-9H2z" />
+            </svg>
+          </span>
+          Home
+        </button>
+        <button class="sidebar-btn" id="btn-docs">
+          <span class="icon">
+            <!-- icona libreria SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#004f9f">
+              <path
+                d="M4 22h16V2H4v20zm2-2V4h12v16H6zm2-2h8v-2H8v2zm0-4h8v-2H8v2zm0-4h8V8H8v2z"
+              />
+            </svg>
+          </span>
+          Documenti
+        </button>
+        <button class="sidebar-btn" id="btn-dati">
+          <span class="icon">
+            <!-- icona lente SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#004f9f">
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+                stroke="#004f9f"
+                stroke-width="2"
+                fill="none"
+              />
+              <line
+                x1="21"
+                y1="21"
+                x2="16.65"
+                y2="16.65"
+                stroke="#004f9f"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          Cerca
+        </button>
+      </div>
+    </aside>
+
+    <main>
+      <form id="user-form" class="user-form">
+        <label>
+          Nome:
+          <input type="text" name="nome" required />
+        </label>
+        <label>
+          Cognome:
+          <input type="text" name="cognome" required />
+        </label>
+        <label>
+          Data di nascita:
+          <input type="date" name="dataNascita" required />
+        </label>
+        <label>
+          Luogo di nascita:
+          <select name="luogoNascita" id="luogoNascita" required>
+            <option value="">Seleziona...</option>
+            <option value="Italia">Italia</option>
+            <option value="Estero">Estero</option>
+          </select>
+        </label>
+        <label id="citta-label" style="display: none">
+          Città di nascita:
+          <input type="text" name="cittaNascita" />
+        </label>
+        <button type="submit">Salva</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <img
+        src="https://www.liguriadigitale.it/images/loghi/logo.png"
+        alt="Logo Liguria Digitale"
+      />
+      <img
+        src="https://www.accademiadigitaleliguria.it/wp-content/uploads/2020/02/logo-navbar.svg"
+        alt="Logo ITS"
+      />
+    </footer>
+  </body>
+</html>

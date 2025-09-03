@@ -1,0 +1,12 @@
+{
+  "name": "esempio_be",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon ./server"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}

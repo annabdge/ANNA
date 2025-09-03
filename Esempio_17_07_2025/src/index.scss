@@ -1,0 +1,106 @@
+$rosso: #a20d27;
+$blu: #082c42;
+$giallo: #f7d115;
+
+$rossoShadow: rgba(162, 13, 39, 0.5);
+$bluShadow: rgba(8, 44, 66, 0.5);
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  justify-items: center;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px $bluShadow;
+  background-color: $giallo;
+  label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 275px;
+    font-weight: bold;
+    color: $rosso;
+    input {
+      width: 150px;
+      padding-inline: 2px;
+    }
+  }
+  button {
+    background-color: $blu;
+    color: $giallo;
+    padding: 5px 10px;
+    margin: auto;
+    border: none;
+    width: 120px;
+  }
+}
+
+.lista {
+  margin-bottom: 25px;
+  .card {
+    display: grid;
+    width: 275px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    p {
+      display: flex;
+      font-style: italic;
+      text-transform: capitalize;
+      span {
+        text-transform: none;
+        display: "block";
+        font-weight: bold;
+        margin-right: 5px;
+        width: 120px;
+        text-align: right;
+        font-style: normal;
+      }
+    }
+    button {
+      color: $giallo;
+      padding: 5px 10px;
+      margin: auto;
+      border: none;
+      width: 120px;
+    }
+  }
+
+  .card:nth-child(even) {
+    border: 1px solid $blu;
+    box-shadow: 5px 5px 5px $rossoShadow;
+    background-color: $blu;
+    color: $giallo;
+    p {
+      span {
+        color: $rosso;
+      }
+    }
+    button {
+      background-color: $rosso;
+    }
+  }
+
+  .card:nth-child(odd) {
+    border: 1px solid $rosso;
+    box-shadow: 5px 5px 5px $bluShadow;
+    background-color: $rosso;
+    color: $giallo;
+    p {
+      span {
+        color: $blu;
+      }
+    }
+    button {
+      background-color: $blu;
+    }
+  }
+}
